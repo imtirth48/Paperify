@@ -24,3 +24,14 @@ dist-ssr
 *.sw?
 # .gitignore
 .env
+# Ignore node modules from both client and server
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Ignore environment variables
+.env
+.env.local
+
+# Build output
+client/dist
