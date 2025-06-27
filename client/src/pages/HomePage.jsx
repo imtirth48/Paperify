@@ -25,19 +25,19 @@ function HomePage() {
   }}
 >
   <div
-    style={{
-      flex: '1 1 400px',
-      maxWidth: '600px',
-      textAlign: 'left',
-    }}
-  >
-    <h1 style={{ fontSize: '2rem', marginBottom: '1rem' }}>
-      Explore Our 3D Paper Bag
-    </h1>
-    <p style={{ fontSize: '1.1rem' }}>
-      Interact with our eco-friendly bag in 3D! Rotate, zoom, and experience the detail of our design.
-    </p>
-  </div>
+  style={{
+    flex: '1 1 400px',
+    maxWidth: '600px',
+    textAlign: 'center',
+    margin: '0 auto',
+  }}
+>
+  <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Explore Our 3D Paper Bag</h1>
+  <p style={{ fontSize: '1.1rem' }}>
+    Interact with our eco-friendly bag in 3D! Rotate, zoom, and experience the detail of our design.
+  </p>
+</div>
+
 
   <div
     style={{
