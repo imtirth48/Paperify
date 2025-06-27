@@ -621,3 +621,14 @@ body.dark-theme {
     font-size: 1.4rem;
   }
 }
+<div style ={
+  height: '400px',
+  backgroundColor: '#fdf8f1',
+  borderRadius: '20px',
+  overflow: 'hidden',
+  boxShadow: '0 8px 30px rgba(0,0,0,0.1)',
+  width: '100%',
+  maxWidth: '500px',
+  margin: '0 auto'
+}>
+
