@@ -2,12 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/profile.jpg" />
+    
+    <!-- ✅ Corrected favicon path -->
+    <link rel="icon" type="image/jpeg" href="/profile.jpg" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paperify</title>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- ✅ Vite expects this path -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
