@@ -1,4 +1,4 @@
-import React, { Suspense, useRef, useEffect } from 'react';
+import React, { Suspense, useRef, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
@@ -18,31 +18,45 @@ function BagModel() {
     }
   }, []);
 
-  return <primitive ref={modelRef} object={scene} scale={1.5} />;
+  return <primitive ref={modelRef} object={scene} scale={1.7} />;
 }
 
 function ModelViewer() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 530);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 530);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div
       style={{
-        width: '100%',
-        maxWidth: '500px',
+        width: '100vw',
+        height: isMobile ? '300px' : '600px',
+        maxWidth: '100%',
         margin: '0 auto',
-        padding: '0',
-        boxSizing: 'border-box',
+        padding: 0,
+        overflow: 'hidden',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        boxSizing: 'border-box',
       }}
     >
       <Canvas
         style={{
           width: '100%',
-          height: '60vw', // Responsive height based on viewport width
-          maxHeight: '400px', // Prevents from getting too tall
+          height: '100%',
           background: 'transparent',
         }}
-        camera={{ position: [0, 1, 3], fov: 50 }}
+        camera={{
+          position: [0, 1.2, 3],
+          fov: isMobile ? 70 : 50,
+        }}
       >
         <ambientLight intensity={0.6} color="#ffe8c8" />
         <directionalLight position={[3, 3, 3]} intensity={1} color="#ffe8c8" />

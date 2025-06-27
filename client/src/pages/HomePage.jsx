@@ -12,6 +12,9 @@ function HomePage() {
       <section
   className="home-3d-section"
   style={{
+    padding: 0,
+  margin: 0,
+  overflowX: 'hidden',
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
