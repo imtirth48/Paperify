@@ -10,45 +10,49 @@ function HomePage() {
     <>
       {/* 🔄 3D Model Preview Section */}
       <section
-  className="home-3d-section"
-  style={{
-    padding: 0,
-  margin: 0,
-  overflowX: 'hidden',
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-    padding: '4rem 2rem',
-    gap: '2rem',
-  }}
->
-  <div
-  style={{
-    flex: '1 1 400px',
-    maxWidth: '600px',
-    textAlign: 'center',
-    margin: '0 auto',
-  }}
->
-  <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Explore Our 3D Paper Bag</h1>
-  <p style={{ fontSize: '1.1rem' }}>
-    Interact with our eco-friendly bag in 3D! Rotate, zoom, and experience the detail of our design.
-  </p>
-</div>
+        className="home-3d-section"
+        style={{
+          padding: 0,
+          margin: 0,
+          overflowX: 'hidden',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          padding: '4rem 2rem',
+          gap: '2rem',
+          boxSizing: 'border-box',
+        }}
+      >
+        <div
+          style={{
+            flex: '1 1 400px',
+            maxWidth: '600px',
+            textAlign: 'center',
+            margin: '0 auto',
+          }}
+        >
+          <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Explore Our 3D Paper Bag</h1>
+          <p style={{ fontSize: '1rem' }}>
+            Interact with our eco-friendly bag in 3D! Rotate, zoom, and experience the detail of our design.
+          </p>
+        </div>
 
-
-  <div
-    style={{
-      flex: '1 1 400px',
-      display: 'flex',
-      justifyContent: 'center',
-    }}
-  >
-    <ModelViewer />
-  </div>
-</section>
+        <div
+          style={{
+            flex: '1 1 400px',
+            display: 'flex',
+            justifyContent: 'center',
+            width: '100%',
+            maxWidth: '600px',
+            margin: '0 auto',
+          }}
+        >
+          <ModelViewer />
+        </div>
+      </section>
 
       {/* 🏠 Hero Section */}
       <section className="hero-section">
@@ -114,3 +118,5 @@ function HomePage() {
 }
 
 export default HomePage;
+
+

@@ -1,3 +1,4 @@
+// --- ModelViewer.jsx ---
 import React, { Suspense, useRef, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
@@ -10,7 +11,7 @@ function BagModel() {
     if (modelRef.current) {
       modelRef.current.traverse((child) => {
         if (child.isMesh) {
-          child.material.color.set('#c8ad7f'); // Dark beige
+          child.material.color.set('#c8ad7f');
           child.material.roughness = 0.8;
           child.material.metalness = 0.2;
         }
@@ -35,16 +36,14 @@ function ModelViewer() {
   return (
     <div
       style={{
-        width: '100vw',
-        height: isMobile ? '300px' : '600px',
-        maxWidth: '100%',
+        width: '100%',
+        maxWidth: isMobile ? '100%' : '500px',
+        height: isMobile ? '280px' : '450px',
         margin: '0 auto',
-        padding: 0,
-        overflow: 'hidden',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        boxSizing: 'border-box',
+        overflow: 'hidden',
       }}
     >
       <Canvas
@@ -55,7 +54,7 @@ function ModelViewer() {
         }}
         camera={{
           position: [0, 1.2, 3],
-          fov: isMobile ? 70 : 50,
+          fov: isMobile ? 65 : 50,
         }}
       >
         <ambientLight intensity={0.6} color="#ffe8c8" />

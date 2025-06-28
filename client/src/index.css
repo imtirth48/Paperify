@@ -621,14 +621,4 @@ body.dark-theme {
     font-size: 1.4rem;
   }
 }
-.model-wrapper {
-  height: 400px;
-  background-color: #fdf8f1;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
 
